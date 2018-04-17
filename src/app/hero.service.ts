@@ -14,20 +14,21 @@ export class HeroService {
   }
 
   getHeroes():Observable<Hero[]> {
-
-    // Code normal
-    // return of(HEROES);
-
-    // Avec 3 secondes d'attentes et envoi d'un message avant
-    this.messageService.add('HeroService: Lecture des héros ...');
-    return of(HEROES).pipe(delay(3000));
-
+    // Avec un temps d'attente et envoi d'un message avant et après
+    this.messageService.add('HeroService.getHeroes: Cherche les héros ...');
+    let obs:Observable;
+    obs = of(HEROES).pipe(delay(1000));
+    obs.subscribe(hero => this.messageService.add('HeroService.getHeroes: Héros trouvés !'));
+    return obs
   }
 
-  getHero(id: number): Observable<Hero> {
-    // TODO: send the message _after_ fetching the hero
-    this.messageService.add(`HeroService: Cherche le héro id=${id}`);
+  getHero(id:number):Observable<Hero> {
+    // Avec un temps d'attente et envoi d'un message avant et après
+    let obs:Observable;
+    this.messageService.add(`HeroService.getHero: Cherche le héro id=${id}`);
     //noinspection TypeScriptValidateTypes
-    return of(HEROES.find(hero => hero.id === id));
+    obs = of(HEROES.find(hero => hero.id === id)).pipe(delay(500));
+    obs.subscribe(hero => this.messageService.add(`HeroService.getHero: Héro ${hero.id} trouvé : ${hero.name}`));
+    return obs;
   }
 }
