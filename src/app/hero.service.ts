@@ -23,4 +23,11 @@ export class HeroService {
     return of(HEROES).pipe(delay(3000));
 
   }
+
+  getHero(id: number): Observable<Hero> {
+    // TODO: send the message _after_ fetching the hero
+    this.messageService.add(`HeroService: Cherche le héro id=${id}`);
+    //noinspection TypeScriptValidateTypes
+    return of(HEROES.find(hero => hero.id === id));
+  }
 }
