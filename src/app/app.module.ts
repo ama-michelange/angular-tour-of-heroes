@@ -8,7 +8,7 @@ import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 import {HeroService} from './hero.service';
 import {MessagesComponent} from './messages/messages.component';
 import {MessageService} from './message.service';
-import {AppRoutingModule} from './/app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HttpClientInMemoryWebApiModule, InMemoryBackendConfigArgs} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
