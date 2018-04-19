@@ -1,16 +1,23 @@
 # Angular Tour Of Heroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Code du tutoriel progressif basé sur l'original d'Angular.
 
-Suivez les différents tags Git pour atteindre directement la fin d'une étape du tutoriel (ou le début de la suivante) :
+Suivez les différents tags Git pour atteindre le code de la fin d'une étape du tutoriel (ou le début de la suivante) :
 
-| Fin du paragraphe         | Tag             |
-| :------------------------ | :-------------- |
-| Introduction       |     end.initial     |
-| Alignée à     |   Alignée au    |
-| Gauche        |     Centre      |
+| Fin du paragraphe                                                | Git Tag                       |
+| :--------------------------------------------------------------- | :---------------------------- |
+| [Introduction](https://angular.io/tutorial)                      | end.initial                   |
+| [The Application Shell](https://angular.io/tutorial/toh-pt0)     | end.theApplicationShell       |
+| [The Hero Editor](https://angular.io/tutorial/toh-pt1)           | end.theHeroEditor             |
+| [Display a Heroes List](https://angular.io/tutorial/toh-pt2)     | end.displayingList            |
+| [Master/Detail Components](https://angular.io/tutorial/toh-pt3)  | end.detailComponents          |
+| [Services](https://angular.io/tutorial/toh-pt4)                  | end.services                  |
+| [HTTP](https://angular.io/tutorial/toh-pt6)                      | end.http                      |
+
 
 # Utilisation des commandes d'Angular CLI
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
 
