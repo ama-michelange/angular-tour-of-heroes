@@ -36,7 +36,7 @@ webdriver-manager version
  
 Mettre à jour les drivers par défaut pour Selenium
 ``` script
-webdriver-manager update --ignore_ssl --proxy http://w3p1.atos-infogerance.fr:8080
+webdriver-manager update --ignore_ssl --proxy [http://server:port]
 ```
 
 Une fois à jour, copier les drivers dans votre projet
