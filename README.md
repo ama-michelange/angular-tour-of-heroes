@@ -1,6 +1,16 @@
-# AngularTourOfHeroes
+# Angular Tour Of Heroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+
+Suivez les différents tags Git pour atteindre directement la fin d'une étape du tutoriel (ou le début de la suivante) :
+
+| Fin du paragraphe         | Tag             |
+| :------------------------ | :-------------- |
+| Introduction       |     end.initial     |
+| Alignée à     |   Alignée au    |
+| Gauche        |     Centre      |
+
+# Utilisation des commandes d'Angular CLI
 
 ## Development server
 
