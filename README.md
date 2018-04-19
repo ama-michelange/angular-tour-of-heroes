@@ -22,6 +22,36 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+### Installation de Protractor pour contrer le proxy et les bugs
+Installer ``protractor`` en global. ``webdriver-manager`` est inclu et s'installera en même temps
+``` script
+yarn global add protractor
+```
+
+Vérifier les versions installées
+``` script
+protractor --version
+webdriver-manager version
+```
+ 
+Mettre à jour les drivers par défaut pour Selenium
+``` script
+webdriver-manager update --ignore_ssl --proxy http://w3p1.atos-infogerance.fr:8080
+```
+
+Une fois à jour, copier les drivers dans votre projet
+``` script
+Source :  C:\Users\[DAS User]\AppData\Local\Yarn\Data\global\node_modules\webdriver-manager\selenium
+Destination : C:\[Path Projet]\node_modules\webdriver-manager\selenium
+ 
+copy [Source]\*.* [Destination]
+``` 
+
+Lancer les tests End to end avec la commande
+``` script
+ng e2e --no-webdriver-update
+```
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
