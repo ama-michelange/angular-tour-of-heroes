@@ -1,0 +1,13 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "Dummy reverse proxy",
+  "main": "proxy.js.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "request": "^2.85.0"
+  }
+}
