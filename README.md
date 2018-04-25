@@ -72,3 +72,57 @@ ng e2e --no-webdriver-update
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+# API
+
+## register
+
+Resquest
+```script
+curl -X POST http://localhost:8000/api/register \
+ -H "Accept: application/json" \
+ -H "Content-Type: application/json" \
+ -d '{"name": "John", "email": "john.doe@toptal.com", "password": "toptal123", "password_confirmation": "toptal123"}'
+ ```
+Response
+```script
+{
+    "data": {
+        "api_token":"0syHnl0Y9jOIfszq11EC2CBQwCfObmvscrZYo5o2ilZPnohvndH797nDNyAT",
+        "created_at": "2017-06-20 21:17:15",
+        "email": "john.doe@toptal.com",
+        "id": 51,
+        "name": "John",
+        "updated_at": "2017-06-20 21:17:15"
+    }
+}
+ ```
+
+## login
+
+Resquest
+```script
+$ curl -X POST localhost:8000/api/login \
+  -H "Accept: application/json" \
+  -H "Content-type: application/json" \
+  -d "{\"email\": \"admin@test.com\", \"password\": \"toptal\" }"
+ ```
+Response
+```script
+{
+    "data": {
+        "id":1,
+        "name":"Administrator",
+        "email":"admin@test.com",
+        "created_at":"2017-04-25 01:05:34",
+        "updated_at":"2017-04-25 02:50:40",
+        "api_token":"Jll7q0BSijLOrzaOSm5Dr5hW9cJRZAJKOzvDlxjKCXepwAeZ7JR6YP5zQqnw"
+    }
+}
+ ```
+## Next request
+Header :
+```script
+Authorization: Bearer Jll7q0BSijLOrzaOSm5Dr5hW9cJRZAJKOzvDlxjKCXepwAeZ7JR6YP5zQqnw
+ ```
